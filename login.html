@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <h1>Login</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="genres.html">Genres</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        <div class="form-container">
+            <form id="loginForm">
+                <h2>Welcome Back!</h2>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="signup.html">Sign Up here</a>.</p>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Book Review Website</p>
+    </footer>
+    <script>
+        // JavaScript to handle login form submission
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            // Get the values from the form fields
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Display an alert with the entered information
+            alert(`Login Successful!\nEmail: ${email}`);
+            
+            // Optionally, you can reset the form after submission
+            this.reset();
+        });
+    </script>
+</body>
+</html>

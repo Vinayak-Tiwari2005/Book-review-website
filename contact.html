@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="genres.html">Genres</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        <div class="contact-info">
+            <strong>Contact Number:</strong>
+            <span class="contact-number">+91-8840833843</span>
+            <br><br><b>OR</b>
+        </div>
+        <div class="form-container">
+            <h2>EMAIL US.</h2>
+            <p>If you have any questions, feel free to reach out to us!</p>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" rows="4" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 Book Review Website</p>
+    </footer>
+    <script>
+        // JavaScript to handle contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            // Get the values from the form fields
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Display an alert with the entered information
+            alert(`Message Sent!\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
+            
+            // Optionally, you can reset the form after submission
+            this.reset();
+        });
+    </script>
+    <style>
+        .contact-info {
+            margin: 20px 0;
+            font-size: 2em; /* Slightly larger font size */
+            color: #211818; /* Text color */
+            text-align: center; /* Center the contact info */
+        }
+        .contact-number {
+            font-weight: bold; /* Make the contact number bold */
+            color: #2e25dc; /* Use a color that matches your theme */
+        }
+    </style>
+</body>
+</html>
